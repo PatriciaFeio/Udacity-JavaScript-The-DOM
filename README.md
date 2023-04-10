@@ -1,9 +1,16 @@
-# Udacity-JavaScript-The-DOM
+# Udacity: JavaScript & the DOM
 Module from the Udacity's Front End Developer Nanodegree Program
 
-# JavaScript Syntax
+[1. JavaScript Syntax](#javaScript-syntax)
+  1. [Let and Const](#let-and-const)
+2. [The Document Object Model](#the-document-object-model)
+3. [Creating Content with JavaScript](#creating-content-with-javaScript)
+4. [Working with Browser Events](#working-with-browser-events)
+5. [Performance](#performance)
 
-## Let and Const
+## JavaScript Syntax <a name="javaScript-syntax"></a>
+
+### Let and Const <a name="let-and-const"></a>
 
 **Global scope vs local scope** -> [JavaScript scope](https://www.w3schools.com/js/js_scope.asp)
 
@@ -234,8 +241,15 @@ function sum(...nums) {
     return total;
 }
 ```
-     
+</br>
 
+# The Document Object Model <a name="the-document-object-model"></a>
+
+# Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
+
+# Working with Browser Events <a name="working-with-browser-events"></a>
+
+# Performance <a name="performance"></a>
 
 
 
