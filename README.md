@@ -27,6 +27,10 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [More Ways To Access Elements](#more-ways-to-access-elements)
 
 [3. Creating Content with JavaScript](#creating-content-with-javaScript)
+  * [Update Existing Page Content](#update-existing-page-content)
+  * [Add New Page Content](#add-new-page-content)
+  * [Remove Page Content](#remove-page-content)
+  * [Style Page Content](#style-page-content)
 
 [4. Working with Browser Events](#working-with-browser-events)
 
@@ -370,6 +374,21 @@ Resources:
 [Back to top](#top)
 
 ## Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
+
+### *Update Existing Page Content* <a name="update-existing-page-content"></a>
+
+
+<br>
+
+### *Add New page Content* <a name="add-new-page-content"></a>
+
+<br>
+
+### *Remove Page Content* <a name="remove-page-content"></a>
+
+<br>
+
+### *Style Page Content* <a name="style-page-content"></a>
 
 <br>
 
