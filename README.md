@@ -21,6 +21,10 @@ Module from Udacity's Front End Developer Nanodegree Program.
   
 [2. The Document Object Model](#the-document-object-model)
   * [The DOM](#the-dom)
+  * [Select Page Element By ID](#select-page-element-by-id)
+  * [Select Page Elements By Class or Tag](#select-page-elements-by-class-or-tag)
+  * [Nodes, Elements, and Interfaces](#nodes-elements-interfaces)
+  * [More Ways To Access Elements](#more-ways-to-access-elements)
 
 [3. Creating Content with JavaScript](#creating-content-with-javaScript)
 
@@ -273,7 +277,7 @@ function sum(...nums) {
     return total;
 }
 ```
-</br>
+<br>
 
 [Back to top](#top)
 
@@ -286,29 +290,100 @@ function sum(...nums) {
 
 - HTML received - HTML tags are converted to tokens - tokens are converted to Nodes - Nodes are converted to the DOM.
 
-- A globally accessible by JavaScript code using the ```document``` object.
+* The DOM is:
 
-- Resources: [Intro to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+- constructed from the browser;
 
-</br>
+- globally accessible by JavaScript code using the ```document``` object.
+
+Resources: [Intro to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+
+<br>
+
+### *Select Page Element By ID* <a name="select-page-element-by-id"></a>
+
+* ```document.getElementById()```.
+* It is called on the ```document``` object.
+* It returns a single item.
+* If there is no element with the given ```id```, it returns ```null```.
+* The ```id``` parameter is case-sensitive.
+
+Resources: [Document: getElementById() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById).
+
+<br>
+
+### *Select Page Elements By Class or Tag* <a name="select-page-elements-by-class-or-tag"></a>
+
+1. Selecting Multiple Elements At Once
+
+* Accessing Elements By Their Class: ```document.getElementsByClassName()```.
+* Accessing Elements By Their Tag: ```document.getElementsByTagName()```.
+* The return value of both methods is a live ```HTMLCollection``` of found elements.
+
+Resources: 
+* [Document: getElementsByClassName() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
+* [Element: getElementsByTagName() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName)
+* [HTMLCollection](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection)
+
+<br>
+
+### *Nodes, Elements, and Interfaces* <a name="nodes-elements-interfaces"></a>
+
+1. How the DOM is constructed:
+* characters
+* tags
+* tokens
+* nodes
+* DOM
+
+2. The ```node``` Interface:
+* Node (capital "N") is a blueprint (interface) that contains information about all of the properties (data) and methods (functionality) that every real node (lowercase "n") has after been created.
+
+3. Element Interface:
+* Is a blueprint for creating elements.
+* It is a descendent of the Node interface (= parent of Element) - EventTarget <- Node <- Element - so it inherits all of the Node Interface's properties and methods. It means that any element that was created from the Element Interface is also a descendent from the Node Interface, so the element is also a node.
+
+Resources:
+* [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node)
+* [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+* [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API)
+
+<br>
+
+### *More Ways To Access Elements* <a name="more-ways-to-access-elements"></a>
+
+1. The querySelector Method:
+* With ```.querySelector()``` method we can select an element by its id, class or tag name.
+* It returns a single element (if we are searching an element by class or tag name, this method will only return the first item it finds).
+
+2. The querySelectorAll Method:
+* ```querySelectorAll()``` method.
+* It returns a non-live ```NodeList``` containing one ```Element``` object for each element that matches at least one of the specified selectors or an empty ```NodeList```in case of no matches. We can access the contents of the list using any standard array notation or a looping statement like a ```for``` loop, a ```for...of``` loop, the ```forEach()``` method.
+
+Resources:
+* [Document: querySelector() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+* [Document: querySelectorAll() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+* [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
+
+<br>
 
 [Back to top](#top)
 
 ## Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
 
-</br>
+<br>
 
 [Back to top](#top)
 
 ## Working with Browser Events <a name="working-with-browser-events"></a>
 
-</br>
+<br>
 
 [Back to top](#top)
 
 ## Performance <a name="performance"></a>
 
-</br>
+<br>
 
 [Back to top](#top)
 
