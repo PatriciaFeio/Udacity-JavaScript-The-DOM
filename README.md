@@ -1,16 +1,28 @@
 # Udacity: JavaScript & the DOM
 Module from the Udacity's Front End Developer Nanodegree Program
 
+
 [1. JavaScript Syntax](#javaScript-syntax)
   1. [Let and Const](#let-and-const)
-2. [The Document Object Model](#the-document-object-model)
-3. [Creating Content with JavaScript](#creating-content-with-javaScript)
-4. [Working with Browser Events](#working-with-browser-events)
-5. [Performance](#performance)
+  2. [Template Literals](#template-literals)
+  3. [Destructuring](#destructuring)
+  4. [Object Literal Shorthand](#object-literal-shorthand)
+  5. [Iteration](#iteration)
+  
+[2. The Document Object Model](#the-document-object-model)
+  1. [The DOM](#the-dom)
+
+[3. Creating Content with JavaScript](#creating-content-with-javaScript)
+
+[4. Working with Browser Events](#working-with-browser-events)
+
+[5. Performance](#performance)
+
 
 ## JavaScript Syntax <a name="javaScript-syntax"></a>
 
-### Let and Const <a name="let-and-const"></a>
+
+1. ### Let and Const <a name="let-and-const"></a>
 
 **Global scope vs local scope** -> [JavaScript scope](https://www.w3schools.com/js/js_scope.asp)
 
@@ -28,14 +40,16 @@ Module from the Udacity's Front End Developer Nanodegree Program
 
 * avoid using ```var```
 
-## Template Literals (or template strings in development releases of ES6)
+
+2. ## Template Literals (or template strings in development releases of ES6) <a name="template-literals"></a>
 
 * prior to ES6, strings were concatenated using the string concatenation operator (```+```)
 * now we use template literals -> backticks (``` ` ` ```) and placeholders inside represented using ```${expression}```
 * template literals preserve newlines as part of the string
 * inside embeded expressions we can perform operations, call functions and use loops
 
-## Destructuring (destructuring assignment syntax)
+
+3. ## Destructuring (destructuring assignment syntax) <a name="destructuring"></a>
 
 * is a JavaScript expression that makes it possible to unpack values (extract data) from arrays, or properties from objects, into distinct variables
 * it allows us to specify the elements we want to extract from the array or object on the left side of an assignment
@@ -44,7 +58,7 @@ Module from the Udacity's Front End Developer Nanodegree Program
 * destructuring values from an object: ```const {variable1, variable2, variable3} = object;```
 * if the object has a property with the same name as variable1, we don't need to specify the property from where we want to extract the values, because the value is automatically stored in the variable1 variable
 
-## Object Literal Shorthand
+4. ## Object Literal Shorthand <a name="object-literal-shorthand"></a>
 
 *  new shorthand ways for initializing objects and adding methods to objects:
 * if the object properties have the same name as the variables being assigned to them, we can remove the duplicate variable names from objects:
@@ -81,7 +95,8 @@ let gemstone = {
 };
 ```
 
-## Iteration
+
+5. ## Iteration <a name="iteration"></a>
 
 * process of getting  an item one after the other
 
@@ -243,7 +258,17 @@ function sum(...nums) {
 ```
 </br>
 
-# The Document Object Model <a name="the-document-object-model"></a>
+## The Document Object Model <a name="the-document-object-model"></a>
+
+1. The DOM <a name="the-dom"></a>
+
+* DOM: document object model, the full, parsed representation of the HTML; a tree-like structure that is a representation of the HTML document, the relationship between elements, and contains the content properties of the elements.
+
+- HTML received - HTML tags are converted to tokens - tokens are converted to Nodes - Nodes are converted to the DOM
+
+- a globally accessible by JavaScript code using the ```document``` object
+
+- resources: [Intro to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 # Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
 
