@@ -4,6 +4,8 @@ Module from Udacity's Front End Developer Nanodegree Program.
 <br>
 
 ## Table of contents
+<a name="top"></a>
+
 <details>
   
 [1. JavaScript Syntax](#javaScript-syntax)
@@ -273,6 +275,9 @@ function sum(...nums) {
 ```
 </br>
 
+[Back to top](#top)
+
+
 ## The Document Object Model <a name="the-document-object-model"></a>
 
 ### *The DOM* <a name="the-dom"></a>
@@ -285,11 +290,27 @@ function sum(...nums) {
 
 - Resources: [Intro to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 
+</br>
+
+[Back to top](#top)
+
 ## Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
+
+</br>
+
+[Back to top](#top)
 
 ## Working with Browser Events <a name="working-with-browser-events"></a>
 
+</br>
+
+[Back to top](#top)
+
 ## Performance <a name="performance"></a>
+
+</br>
+
+[Back to top](#top)
 
 
 
