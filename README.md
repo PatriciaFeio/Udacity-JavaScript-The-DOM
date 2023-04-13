@@ -160,7 +160,7 @@ forEach loop
 
 ### *For...of Loop* <a name="for-of-loop"></a>
 
-* Used to loop over any type of ata that is iterable.
+* Used to loop over any type of data that is iterable.
 * No index used.
 * The most concised version of all the for loops.
 
@@ -376,6 +376,29 @@ Resources:
 ## Creating Content with JavaScript <a name="creating-content-with-javaScript"></a>
 
 ### *Update Existing Page Content* <a name="update-existing-page-content"></a>
+
+With the element's property ```.innerHTML``` we can:
+* get/set an element's (and all of its descendents) HTML content (inside the selected element);
+* it returns a ```DOMString```.
+
+ The ```.outerHTML ```:
+* represents the HTML element itself, as well as its children.
+
+ The ```.textContent``` property will:
+* set/get the text content of an element and all its descencents;
+* returns all text content, regardless of CSS.
+
+* To update an element, including its HTML, we need to use the ```.innerHTML``` property (```.innerHTML``` will render any HTML on the string).
+
+ With the element's property ```.innerText``` we can:
+* get/set an element's text content, but only the visible text of the element.
+
+Resources:
+* [Element: innerHTML property](https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
+* [Node: textContent property](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent)
+* [HTMLElement: innerText property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText)
+* [The poor, misunderstood innerText](http://perfectionkills.com/the-poor-misunderstood-innerText/)
+* [innerText vs. textContent](https://kellegous.com/j/2013/02/27/innertext-vs-textcontent/)
 
 
 <br>
