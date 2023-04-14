@@ -405,6 +405,42 @@ Resources:
 
 ### *Add New page Content* <a name="add-new-page-content"></a>
 
+
+```.createElement()``` method creates the HTML element specified by tagName:
+* is a method on the ```document``` object;
+* ```document.createElement("tagName");```;
+* it just creates an element, it doesn't add it to the DOM.
+
+
+```.appendChild()``` method adds an element to the page appending it (adding something to the end of a piece of writing):
+* it must be called on another element, not the ```document```;
+* it's a method of the Node interface;
+* if the given child is a reference to an existing node in the document, ```appendChild()``` moves it from its current position to the new position;
+* ```element.appendChild(newElement);```.
+
+
+```.createTextNode()``` method to create a new text nodes. The element's ```.textContent()``` property is used more often than creating a text node with the ```.createTextNode()```method.
+
+
+Inserting HTML in other locations with the ```.insertAdjacentHTML()``` method:
+* method of the ```Element``` interface that parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position: ```insertAdjacentHTML(position, text)```
+* the second argument text of ```insertAdjacentHTML()``` method parses the specified text as HTML and inserts the resulting nodes into the DOM tree at a specified position;
+* the position is a string representing the position relative to the element in one of the four positions:
+1. ```beforebegin``` - inserts the HTML text as a previous sibling;
+2. ```afterbegin``` - inserts the HTML text as the first child;
+3. ```beforeend``` - inserts the HTML text as the last child;
+4. ```afterend```- inserts the HTML text as a following sibling.
+
+
+
+Resources:
+* [Document: createElement() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+* [Node: appendChild() method](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+* [Document: createTextNode() method](https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
+* [Element: insertAdjacentHTML() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
+
+
+
 <br>
 
 ### *Remove Page Content* <a name="remove-page-content"></a>
