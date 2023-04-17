@@ -403,7 +403,7 @@ Resources:
 
 <br>
 
-### *Add New page Content* <a name="add-new-page-content"></a>
+### *Add New Page Content* <a name="add-new-page-content"></a>
 
 
 ```.createElement()``` method creates the HTML element specified by tagName:
@@ -444,6 +444,40 @@ Resources:
 <br>
 
 ### *Remove Page Content* <a name="remove-page-content"></a>
+
+```.removeChild()``` method:
+* method of the ```Node``` interface
+* the opposite of the ```appendChild()```method;
+* requires a parent element, and
+* the child element that will be removed;
+*   <parent-element>```.removeChild```(<child-to-remove>).
+
+
+```remove()``` method:
+* removes the element from the DOM;
+*  <element>.remove().
+
+
+```firstChild```property:
+* returns the node's first child in the tree, or ```null``` if the node has no children;
+* might return whitespace (if there is any) to preserve the formating of the underlying HTML source code.
+
+
+```firstElementChild``` property:
+* returns an element's first child ```Element```, or ```null```if there are no child elements.
+
+
+```parentElement``` property:
+* returns the DOM node's parent ```Element```, or ```null```if the node either has no parent, or its parent isn't a DOM ```Element```.
+
+*If we don't have the parent element, we can call the ```parentElement``` property on the element we want to remove to refer to its parent. This way, we "move focus" to the element's parent. Then we call ```.removeChild()``` on that referenced parent Element.
+
+Resources:
+* [Node: removeChild() method](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)
+* [Element: remove() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/remove)
+* [Node: firstChild property](https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild)
+* [Element: firstElementChild property](https://developer.mozilla.org/en-US/docs/Web/API/Element/firstElementChild)
+* [Node: parentElement property](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)
 
 <br>
 
