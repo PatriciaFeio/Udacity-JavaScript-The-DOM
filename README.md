@@ -532,6 +532,61 @@ Resources:
 
 ## Working with Browser Events <a name="working-with-browser-events"></a>
 
+1. Events - what they are
+
+* Events are actions that take place in the browser that can be initiated by either the user or the browser itself.
+* The Chrome browser has a special ```monitorEvents()``` function that will let us see different events as they are occurring, and there is also the ```unmonitorEvents()``` function that will turn off the announcing of events for the targeted element (for development/testing purposes only):
+
+```
+// start displaying all events on the document object
+monitorEvents(document);
+
+// turn off the displaying of all events on the document object.
+unmonitorEvents(document);
+```
+
+Resources:
+* [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+* [Understanding Events in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-events-in-javascript)
+* [Console Utilities API reference](https://developer.chrome.com/docs/devtools/console/utilities/#monitorevents)
+
+<br>
+
+2. Responding to an event - how to listen for an event and respond when one happens
+
+* An Event Target
+
+   The EventTarget Interface is inherited by all nodes and elements: 
+
+  ```EventTarget```  <----  ´´´Node```   <----   ```Element```
+  
+   The EventTarget is at the top of the chain, it doesn't inherit any properties or methods from any other interfaces, but every other interface inherits from it and therefore contain its properties and methods.
+   Both the ```document``` object and any ```DOM element``` can be an event target because both the Element Interface and the Document Interface inherit from the EventTarget Interface.
+   The EventTarget Interface:
+   * doesn't have any properties;
+   * only has three methods - ```.addEventListener()``` , ```.removeEventListener()``` , ```.dispatchEvent()```
+
+
+
+* Adding An Event Listener
+
+
+Resource:
+* [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
+
+
+3. Event data - harness the data that is included with an event
+
+
+4. Stopping an event - proventing an event from triggering multiple responses
+
+
+5. Event lifecycle - the lifecycle stages of an event
+
+
+
+6. DOM readiness - events to know when the DOM itself is ready to be interacted with
+
 <br>
 
 [Back to top](#top)
