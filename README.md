@@ -483,6 +483,49 @@ Resources:
 
 ### *Style Page Content* <a name="style-page-content"></a>
 
+Modifying an element's style attribute:
+* ```element.style.property = value```;
+* we can only modify on CSS style at a time.
+
+Adding multiple styles at once:
+* return the cssText property: ```object.style.cssText```;
+* set the cssText property: ```object.style.cssText = string``` (string with the list of styles/values we want to modify; here hte property names can have hyphens).
+
+Setting an element's attributes:
+* ```element.setAttribute(name, value)```;
+* ```.setAttribute``` is not just for styling page elements. This method can be used to set any attribute for an element.
+
+Accessing an element's classes:
+* getting/setting a list of classes with ```.className```;
+* the returned list is a space-separated string of the classes, like "class-1  class-2";
+* we can convert the space-separated string into an array using the JavaScript method ```.split()```:
+
+```const arrayOfClasses = listOfClasses.split(' ');```
+
+```console.log(arrayOfClasses);  // ["class-1", "class-2"]```
+
+and then we can use any different array methods to search for a class to remove it or update it.
+
+Getting/setting/toggling CSS classes with the ```.classList``` property:
+* it returns a live ```DOMTokenList``` collection of the ```class``` attributes of the element;
+* it has a number of properties of is own:
+* ```.add()``` to add a class to the list;
+* ```.remove()``` to remove a class from the list;
+* ```.toggle()``` adds a class if it doesn't exist or remove it from the list if it does;
+* ```.contains()``` returns a boolean based on if the class exists on the list or not.
+
+
+Resources:
+* [CSS Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+* [HTMLElement: style property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+* [Element: setAttribute() method](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+* [HTMLElement: style property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+* [Element: className property](https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
+* [Element: classList property](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+* [Using dynamic styling information](https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+* [Element: nextElementSibling property](https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling)
+
+
 <br>
 
 [Back to top](#top)
