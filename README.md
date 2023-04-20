@@ -595,6 +595,12 @@ Resources:
       - double equality (```==```) operator that will allow type coercion;
       - triple equality (```===```) that will prevent type coercion when comparing.
       
+      
+      
+ Resources:
+ * [Comparing objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#comparing_objects)
+ * [Type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+      
 
 
 
