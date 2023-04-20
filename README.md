@@ -33,6 +33,8 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [Style Page Content](#style-page-content)
 
 [4. Working with Browser Events](#working-with-browser-events)
+  * [Events - what they are](#events-what-they-are)
+  * [Responding to an event](#responding-to-an-event)
 
 [5. Performance](#performance)
   </details>
@@ -532,7 +534,7 @@ Resources:
 
 ## Working with Browser Events <a name="working-with-browser-events"></a>
 
-1. Events - what they are
+  1. Events - what they are <a name="events-what-they-are"></a>
 
 * Events are actions that take place in the browser that can be initiated by either the user or the browser itself.
 * The Chrome browser has a special ```monitorEvents()``` function that will let us see different events as they are occurring, and there is also the ```unmonitorEvents()``` function that will turn off the announcing of events for the targeted element (for development/testing purposes only):
@@ -552,7 +554,7 @@ Resources:
 
 <br>
 
-2. Responding to an event - how to listen for an event and respond when one happens
+2. Responding to an event - how to listen for an event and respond when one happens <a name="responding-to-an-event"></a>
 
 * An Event Target
 
@@ -564,18 +566,33 @@ Resources:
    Both the ```document``` object and any ```DOM element``` can be an event target because both the Element Interface and the Document Interface inherit from the EventTarget Interface.
    The EventTarget Interface:
    * doesn't have any properties;
-   * only has three methods - ```.addEventListener()``` , ```.removeEventListener()``` , ```.dispatchEvent()```
-
-
-
-* Adding An Event Listener
-
-
-Resource:
+   * only has three methods - ```.addEventListener()``` , ```.removeEventListener()``` , ```.dispatchEvent()``` .
+  
+* Adding an Event Listener
+  
+  * ```.addEventListener()``` method - to listen for events and respond to them.
+  * How to set an event listener:
+  
+    ```<event-target>.addEventListener(<event-to-listen-for>, <function-to-run-when-an-event-happens>);```
+  
+    where:
+    * ````<event-target>``` is the target;
+    * ```<event-to-listen-for>``` is the type of event to listen for;
+    * ```<function-to-run-when-an-event-happens>``` is a function to run when the event occurs - the listener.
+  
+  Resources:
 * [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
+* [EventTarget: addEventListener() method](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+  
+  <br>
+
+3. Removing an Event Listener
 
 
-3. Event data - harness the data that is included with an event
+
+
+
 
 
 4. Stopping an event - proventing an event from triggering multiple responses
