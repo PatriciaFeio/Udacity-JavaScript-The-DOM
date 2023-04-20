@@ -34,7 +34,7 @@ Module from Udacity's Front End Developer Nanodegree Program.
 
 [4. Working with Browser Events](#working-with-browser-events)
   * [Events - what they are](#events-what-they-are)
-  * [Responding to an event](#responding-to-an-event)
+  * [Responding to Eventsvents](#responding-to-events)
 
 [5. Performance](#performance)
   </details>
@@ -554,7 +554,7 @@ Resources:
 
 <br>
 
-2. Responding to an event - how to listen for an event and respond when one happens <a name="responding-to-an-event"></a>
+2. Responding to Events - how to listen for an event and respond when one happens <a name="responding-to-events"></a>
 
 * An Event Target
 
@@ -588,6 +588,13 @@ Resources:
   <br>
 
 3. Removing an Event Listener
+
+  * Are objects (objects, arrays, and function) Equal in JavaScript
+  
+    Equality in JavaScript:
+      - double equality (```==```) operator that will allow type coercion;
+      - triple equality (```===```) that will prevent type coercion when comparing.
+      
 
 
 
