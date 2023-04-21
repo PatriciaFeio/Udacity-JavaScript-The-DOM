@@ -590,7 +590,7 @@ Resources:
 
 3. Removing an Event Listener <a name="removing-an-event-listener"></a>
 
-  * we remove an event listener using the ```.removeEventListener()``` method and passing to it the same exact listener function to it as the one we passed to ```.addEventListener()```. So we have to understand how equality works in JS.
+  * We remove an event listener using the ```.removeEventListener()``` method and passing to it the same exact listener function to it as the one we passed to ```.addEventListener()```. So we have to understand how equality works in JS.
 
   * Are objects (objects, arrays, and function) Equal in JavaScript
   
@@ -601,10 +601,10 @@ Resources:
       
   * Using the ```.removeEventListener()```:
   
-      <event-target>.removeEventListener(<event-to-listen-for>, <function-to-remove>), where:
-          - event-target is the **target**;
-          - event-to-listen-for is the **type** of event to listen for; and
-          - function-to-remove is the **listener** (the function to remove).
+      ```<event-target>.removeEventListener(<event-to-listen-for>, <function-to-remove>)```, where:
+       - event-target is the **target**;
+       - event-to-listen-for is the **type** of event to listen for; and
+       - function-to-remove is the **listener** (the function to remove).
           
       So, the **listener** function must be the exact same function as the one used in the ```.addEventListener()``` call. 
       
