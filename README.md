@@ -34,7 +34,8 @@ Module from Udacity's Front End Developer Nanodegree Program.
 
 [4. Working with Browser Events](#working-with-browser-events)
   * [Events - what they are](#events-what-they-are)
-  * [Responding to Eventsvents](#responding-to-events)
+  * [Responding to Events](#responding-to-events)
+  * [Removing an Event Listener](#removing-an-event-listener)
 
 [5. Performance](#performance)
   </details>
@@ -576,9 +577,9 @@ Resources:
     ```<event-target>.addEventListener(<event-to-listen-for>, <function-to-run-when-an-event-happens>);```
   
     where:
-    * ````<event-target>``` is the target;
-    * ```<event-to-listen-for>``` is the type of event to listen for;
-    * ```<function-to-run-when-an-event-happens>``` is a function to run when the event occurs - the listener.
+    * ````<event-target>``` is the **target**;
+    * ```<event-to-listen-for>``` is the **type** of event to listen for;
+    * ```<function-to-run-when-an-event-happens>``` is a function to run when the event occurs - the ***listener***.
   
   Resources:
 * [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget)
@@ -587,13 +588,25 @@ Resources:
   
   <br>
 
-3. Removing an Event Listener
+3. Removing an Event Listener <a name="removing-an-event-listener"></a>
+
+  * we remove an event listener using the ```.removeEventListener()``` method and passing to it the same exact listener function to it as the one we passed to ```.addEventListener()```. So we have to understand how equality works in JS.
 
   * Are objects (objects, arrays, and function) Equal in JavaScript
   
     Equality in JavaScript:
       - double equality (```==```) operator that will allow type coercion;
       - triple equality (```===```) that will prevent type coercion when comparing.
+      - In JavaScript, objects are a reference type. Two distinct objects are never equal, even if they have the same properties. Only comparing the same object               reference with itself yields true.
+      
+  * Using the ```.removeEventListener()```:
+  
+      <event-target>.removeEventListener(<event-to-listen-for>, <function-to-remove>), where:
+          - event-target is the **target**;
+          - event-to-listen-for is the **type** of event to listen for; and
+          - function-to-remove is the **listener** (the function to remove).
+          
+      So, the **listener** function must be the exact same function as the one used in the ```.addEventListener()``` call. 
       
       
       
