@@ -611,8 +611,12 @@ Resources:
       
       
  Resources:
- * [Comparing objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#comparing_objects)
- * [Type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+  * [Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+  * [Object Equality in JavaScript](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)
+  * [Comparing objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#comparing_objects)
+  * [Type coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion)
+  * [EventTarget: removeEventListener() method](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+  * [Easily jump to event listeners](https://developer.chrome.com/blog/easily-jump-to-event-listeners/)
       
 
 
