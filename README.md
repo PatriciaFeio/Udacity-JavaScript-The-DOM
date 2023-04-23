@@ -36,6 +36,7 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [Events - what they are](#events-what-they-are)
   * [Responding to Events](#responding-to-events)
   * [Removing an Event Listener](#removing-an-event-listener)
+  * [Phases of an Event](#phases-of-an-event)
 
 [5. Performance](#performance)
   </details>
@@ -618,14 +619,24 @@ Resources:
   * [EventTarget: removeEventListener() method](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
   * [Easily jump to event listeners](https://developer.chrome.com/blog/easily-jump-to-event-listeners/)
       
-
-
-
-
-
-
-
-4. Stopping an event - proventing an event from triggering multiple responses
+  <br>
+  
+  4. Phases of an Event <a name="phases-of-an-event"></a>
+  
+  * Phases of the lifecycle of an event:
+    * the **capturing** phase;
+    * the **at target** phase;
+    * and the **bubbling** phase.
+  
+  * Most event handlers:
+    * run during the **at target** phase
+  
+  * But sometimes, in a collection of items (such as a list), if we click on a child item and a handler doesn't intercept the click, the event will "bubble" upward to     the parent, and keeps bubbling until something handles it or hits the document.
+  
+  * Capturing lets the parent intercept an event before it reaches a child
+  
+  
+  Stopping an event - proventing an event from triggering multiple responses
 
 
 5. Event lifecycle - the lifecycle stages of an event
