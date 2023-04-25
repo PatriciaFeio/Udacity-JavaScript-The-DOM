@@ -38,6 +38,7 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [Removing an Event Listener](#removing-an-event-listener)
   * [Phases of an Event](#phases-of-an-event)
   * [Avoid Too Many Events](#avoid-too-many-events)
+  * [Know When the DOM Is Ready](#know-when-the-dom-is-ready]
 
 [5. Performance](#performance)
   </details>
@@ -728,20 +729,51 @@ Resources:
   
   * [Event delegation](https://javascript.info/event-delegation)
   * [How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate)
+  
+  <br>
+  
+  6. Know When the DOM Is Ready <a name="know-when-the-dom-is-ready"></a>
+  
+  * The DOM is built incrementally, meaning, it is a sequencial process when the HTML is received and converted into tokens and built into the document object model. That's why it is important where the JS file is placed.
+  
+  * The **content is loaded event**, ```DOMContentLoaded``` event, is fired by the browser when the document object model has been fully loaded.
+  
+  * We can listen for the ```DOMContentLoaded``` event:
+  
+  ```
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('the DOM is ready to be interacted with!');
+  });
+  ```
+  
+  * The target of the ```DOMContentLoaded``` event is the ```document``` object.
+  
+  * Using the ```DOMContentLoaded``` Event:
+  
+    * if we want to have JS code in the ```head``` element, we have to wrapp it in an event listener for the ```DOMContentLoaded``` event. This will prevent the JS code to run before the DOM is constructed.
     
+    * Example:
+    
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <link rel="stylesheet" href="/css/styles.css" />
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelector('footer').style.backgroundColor = 'purple';
+        });
+      </script>
+    ```
+    
+    * The ```load``` event is similar (e.g. ```document.onload(...)```), but ```load``` fires later than ```DOMContentLoaded``` (```load``` waits until all of the images, stylesheet, etc. have been loaded) (this is generally the old way).
+    
+    * JS code in the ```head``` should only be used if we have JS code that needs to run as soon as possible; in this case, this JS code must be wrapped in a ```DOMContentLoaded``` event listener.
+    
+  Resource:
   
-  
-  
-  
-  Stopping an event - proventing an event from triggering multiple responses
-
-
-5. Event lifecycle - the lifecycle stages of an event
-
-
-
-6. DOM readiness - events to know when the DOM itself is ready to be interacted with
-
+  * [Window: DOMContentLoaded event](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+    
 <br>
 
 [Back to top](#top)
