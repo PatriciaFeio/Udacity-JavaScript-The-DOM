@@ -578,7 +578,7 @@ Resources:
     ```<event-target>.addEventListener(<event-to-listen-for>, <function-to-run-when-an-event-happens>);```
   
     where:
-    * ````<event-target>``` is the **target**;
+    * ```<event-target>``` is the **target**;
     * ```<event-to-listen-for>``` is the **type** of event to listen for;
     * ```<function-to-run-when-an-event-happens>``` is a function to run when the event occurs - the ***listener***.
   
@@ -634,6 +634,18 @@ Resources:
   * But sometimes, in a collection of items (such as a list), if we click on a child item and a handler doesn't intercept the click, the event will "bubble" upward to     the parent, and keeps bubbling until something handles it or hits the document.
   
   * Capturing lets the parent intercept an event before it reaches a child
+  
+  * Complete syntax of the ```.addEventListener()``` method:
+    * addEventListener(type, listener, useCapture), where:
+      * type is the **event type** to listen for;
+      * listener can be ```null```, an object with a ```handleEvent()``` method, or a JS function;
+      * ```useCapture``` is a boolean indicating whether events of this type will be dispatched to the registered ```listener``` before being dispatched to any                 ```eventTarget``` beneath it in the DOM tree. If not specified, ```useCapture``` defaults to false.
+  
+  * So, the ```.addEventListener()``` method can be called with two or three arguments:
+    * if called with two arguments (event type and the listener) it will invoke the listener during the **bubbling phase**;
+    * if called with three arguments (event type, the listener and useCapture being true) it will invoke the listener during the **capturing phase**.
+  
+  * The Event Object
   
   
   Stopping an event - proventing an event from triggering multiple responses
