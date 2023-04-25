@@ -633,7 +633,7 @@ Resources:
   
   * But sometimes, in a collection of items (such as a list), if we click on a child item and a handler doesn't intercept the click, the event will "bubble" upward to     the parent, and keeps bubbling until something handles it or hits the document.
   
-  * Capturing lets the parent intercept an event before it reaches a child
+  * Capturing lets the parent intercept an event before it reaches a child.
   
   * Complete syntax of the ```.addEventListener()``` method:
     * addEventListener(type, listener, useCapture), where:
