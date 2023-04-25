@@ -37,6 +37,7 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [Responding to Events](#responding-to-events)
   * [Removing an Event Listener](#removing-an-event-listener)
   * [Phases of an Event](#phases-of-an-event)
+  * [Avoid Too Many Events](#avoid-too-many-events)
 
 [5. Performance](#performance)
   </details>
@@ -624,14 +625,14 @@ Resources:
   4. Phases of an Event <a name="phases-of-an-event"></a>
   
   * Phases of the lifecycle of an event:
-    * the **capturing** phase;
-    * the **at target** phase;
-    * and the **bubbling** phase.
+    * the **capturing** phase (the process by which an event can be handled by one of the target’s ancestors before being handled by the event target);
+    * the **at target** phase (the process by which an event can be handled by the event target);
+    * and the **bubbling** phase (the process by which an event can be handled by one of the target’s ancestors after being handled by the event target).
   
   * Most event handlers:
     * run during the **at target** phase
   
-  * But sometimes, in a collection of items (such as a list), if we click on a child item and a handler doesn't intercept the click, the event will "bubble" upward to     the parent, and keeps bubbling until something handles it or hits the document.
+  * But sometimes, in a collection of items (such as a list), if we click on a child item and a handler doesn't intercept the click, the event will "bubble" upward to the parent, and keeps bubbling until something handles it or hits the document.
   
   * Capturing lets the parent intercept an event before it reaches a child.
   
@@ -646,6 +647,90 @@ Resources:
     * if called with three arguments (event type, the listener and useCapture being true) it will invoke the listener during the **capturing phase**.
   
   * The Event Object
+  
+    * The event object is a regular JS object included by the browser when an event occurs.
+    * We can add a parameter to a listener function to store the **event object** (and then have access to a lot of information):
+    
+        ```
+        document.addEventListener('click', function(event) {
+          console.log('The document was clicked');
+        });
+        ```
+        
+   * The ```event``` paramenter can have the following names:
+    * ```evt```
+    * ```e```
+    * we can give it any name we want, but it must be informative/descriptive.
+    
+  * The Default Action
+  
+    * One of the reasons to use the event object is to prevent default action from happening, like the default action of a link (navigate to the location provided by its ```href``` attribute) or on a form (data being send to the location in its ```action```attribute).
+    
+    * Prevent default action with the event object's ```.preventDefault()``` method: ```event.preventDefault()```
+    
+    ```
+    target.addEventListener('click', function (event) {
+    event.preventDefault();
+    //code for somethign to happen
+    });
+    ```
+    
+    
+  Resources:
+  
+  * [Event dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
+  * [capture phase](https://www.w3.org/TR/DOM-Level-3-Events/#capture-phase)
+  * [target phase](https://www.w3.org/TR/DOM-Level-3-Events/#target-phase)
+  * [bubbling phase](https://www.w3.org/TR/DOM-Level-3-Events/#bubble-phase)
+  * [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+  * [Event reference](https://developer.mozilla.org/en-US/docs/Web/Events)
+  * [EventTarget: addEventListener() method](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+  * [Event: preventDefault() method](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+  
+  <br>
+  
+  5. Avoid Too Many Events <a name="avoid-too-many-events"></a>
+  
+  * When we use ```.addEventListener()``` on a common ancestor of several element and we want to access any of those elements, we use event delegation. So, event delegation is the process of delegating to a parent element the ability to manage events for child elements.
+  
+  * Using event delegation:
+    * the event object has a ```.target``` property, that references the target of the event. So, ```event.target``` gives us access to the element we want.
+    
+  * Checking the Node Type in Event Delegation:
+  
+    * Sometimes we have to check the Node type in event delegation by, for exemple, use an if statement:
+    
+    ``` if (evt.target.nodeName === 'desired element') {  // ← verifies target is desired element ```
+    
+      * Here we are using the ```.nodeName``` property of the Node interface that is inherited
+      
+  * The ```.nodeName``` property
+  
+    * The ```nodeName``` property will return an uppercase string (not a lowercase one).
+    
+    * So, we can check using capital letters:
+    
+    ```
+    if (evt.target.nodeName === 'SPAN') {
+    console.log('A span was clicked with text ' + evt.target.textContent);
+    }
+    ```
+
+      Or convert nodeName to lowercase:
+      
+    ```
+    if (evt.target.nodeName.toLowerCase() === 'span') {
+    console.log('A span was clicked with text ' + evt.target.textContent);
+    }
+    ```
+    
+  Resources:
+  
+  * [Event delegation](https://javascript.info/event-delegation)
+  * [How JavaScript Event Delegation Works](https://davidwalsh.name/event-delegate)
+    
+  
+  
   
   
   Stopping an event - proventing an event from triggering multiple responses
