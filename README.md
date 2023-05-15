@@ -38,7 +38,7 @@ Module from Udacity's Front End Developer Nanodegree Program.
   * [Removing an Event Listener](#removing-an-event-listener)
   * [Phases of an Event](#phases-of-an-event)
   * [Avoid Too Many Events](#avoid-too-many-events)
-  * [Know When the DOM Is Ready](#know-when-the-dom-is-ready]
+  * [Know When the DOM Is Ready](#know-when-the-dom-is-ready)
 
 [5. Performance](#performance)
   </details>
